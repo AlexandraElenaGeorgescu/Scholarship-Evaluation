@@ -8,7 +8,7 @@ export class EmployeeService {
   readonly baseUrl = 'https://localhost:44396';
   readonly httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'employees-app/json',
+      'Content-Type': 'Scholarship-Evaluation/json',
     }),
   };
   constructor(private httpClient: HttpClient) {}
