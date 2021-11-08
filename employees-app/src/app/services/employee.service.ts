@@ -29,7 +29,7 @@ export class EmployeeService {
 
   addEmployee(employee: Employee) {
     return this.httpClient.post(
-      this.baseUrl + '/employees',
+      this.baseUrl + '/employees/',
       employee,
       this.httpOptions
     );
