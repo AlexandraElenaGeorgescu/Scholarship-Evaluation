@@ -16,7 +16,6 @@ namespace API.NetCoreProject.Services
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
-
             _employees = database.GetCollection<Employees>(settings.EmployeeCollectionName);
         }
 
