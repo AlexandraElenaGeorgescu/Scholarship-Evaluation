@@ -5,10 +5,10 @@ import { Employee } from '../models';
 
 @Injectable()
 export class EmployeeService {
-  readonly baseUrl = 'https://localhost:44396/';
+  readonly baseUrl = 'https://localhost:44396';
   readonly httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json',
+      'Content-Type': 'employees-app/json',
     }),
   };
   constructor(private httpClient: HttpClient) {}
