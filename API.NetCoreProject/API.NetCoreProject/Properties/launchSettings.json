@@ -35,7 +35,7 @@
       "AllowedHosts": "*",
 
       "MongoDBSettings": {
-        "ConnectionString": "mongodb://localhost:27016",
+        "ConnectionString": "mongodb://localhost:27017",
         "DatabaseName": "employees",
         "EmployeeCollectionName": "Note"
       }
