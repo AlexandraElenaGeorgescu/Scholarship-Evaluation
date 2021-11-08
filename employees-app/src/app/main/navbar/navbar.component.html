@@ -1,0 +1,21 @@
+<mat-toolbar class="mat-elevation-z6 navbar">
+    <div class="left-side">
+      <button mat-button (click)="navigateToAdd()">Add employee</button>
+      <div class="drop-down">
+        <form>
+          <select
+            name="age"
+            id="age"
+            [(ngModel)]="selectedFilter"
+          >
+            <ng-container *ngFor="let age of age">
+              <option [value]="age">{{ age }}</option>
+            </ng-container>
+          </select>
+        </form>
+      </div>
+      <button mat-button (click)="onFilterPressed()">Filter employees</button>
+      <button mat-button (click)="onShowAllPressed()">Show all employees</button>
+    </div>
+  </mat-toolbar>
+  

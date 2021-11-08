@@ -1,0 +1,20 @@
+<ng-container *ngIf="employees$ | async">
+    <div class="employees-container">
+      <ng-container *ngFor="let employee of employees$ | async; let i = index">
+        <app-employee
+          [id]="employee.id"
+          [name]="employee.name"
+          [position]="employee.position"
+          [age]="employee.age"
+          (deleteEvent)="onDelete($event)"
+          (updateEvent)="onUpdate($event)"
+        ></app-employee>
+      </ng-container>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!(employees$ | async)">
+    <div class="no-result">
+      <h1>{{ error }}</h1>
+    </div>
+  </ng-container>
+  

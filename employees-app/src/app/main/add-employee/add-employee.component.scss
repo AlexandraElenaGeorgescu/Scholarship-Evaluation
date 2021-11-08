@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 32px;
+    input {
+      margin-bottom: 4px;
+    }
+    .full-width {
+      width: 100%;
+    }
+  
+    .bottom-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .bottom-left {
+        margin-bottom: 8px;
+        align-items: center;
+        .mat-radio-button {
+          margin: 8px;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,59 @@
+<div class="container">
+    <mat-card class="mat-elevation-z12">
+      <mat-card-content>
+        <form [formGroup]="employeeForm" (ngSubmit)="saveEmployee()">
+          <mat-form-field class="full-width">
+            <input
+              name="nameInput"
+              matInput
+              placeholder="Employee name"
+              formControlName="name"
+            />
+            <mat-error *ngIf="employeeForm.get('name').invalid">
+              Name field is required
+            </mat-error>
+          </mat-form-field>
+          <div class="bottom-container">
+            <div class="bottom-left">
+              <div class="radio-buttons">
+                <mat-radio-group>
+                  <ng-container *ngFor="let age of age">
+                    <mat-radio-button
+                      [value]="age"
+                      name="age"
+                      formControlName="age"
+                      ngDefaultControl
+                      >{{ age }}</mat-radio-button
+                    >
+                  </ng-container>
+                  <mat-error *ngIf="employeeForm.get('age').invalid">
+                    You must select an age
+                  </mat-error>
+                </mat-radio-group>
+              </div>
+              <div class="positions">
+                <mat-form-field>
+                  <mat-label>Position</mat-label>
+                  <mat-select required formControlName="position">
+                    <mat-option
+                      *ngFor="let position of positions"
+                      [value]="position"
+                    >
+                      {{ position }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-error *ngIf="employeeForm.get('position').invalid">
+                  You must select a position
+                </mat-error>
+              </div>
+            </div>
+            <button mat-icon-button type="submit">
+              <mat-icon>Save</mat-icon>
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

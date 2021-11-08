@@ -1,0 +1,25 @@
+.navbar {
+    justify-content: space-between;
+    height: 50px;
+    ::ng-deep .mat-form-field-underline {
+      display: none;
+    }
+    .left-side {
+      display: flex;
+  
+      .drop-down {
+        margin-left: 8px;
+        select {
+          height: 30px;
+        }
+      }
+    }
+    .right-side {
+      display: flex;
+      button {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
+  }
+  

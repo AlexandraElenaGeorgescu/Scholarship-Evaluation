@@ -1,0 +1,20 @@
+<div class="employee-card">
+    <mat-card class="mat-elevation-z12">
+      <mat-card-title>
+        {{ name | uppercase }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        <span>{{ position }}</span>
+      </mat-card-subtitle>
+      <mat-card-subtitle>
+        <span>{{ age }}</span>
+      </mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-flat-button (click)="update()">Modify</button>
+        <button id="deleteButton" mat-flat-button (click)="delete()">
+          Delete
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
